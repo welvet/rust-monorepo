@@ -1,0 +1,8 @@
+[workspace]
+
+members = [
+    "util",
+    "playground",
+    "webplay/backend",
+    "webplay/frontend",
+]

@@ -1,0 +1,13 @@
+[package]
+name = "webplay-frontend"
+version = "0.1.0"
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.68"
+yew = "0.12"
+chrono = { version = "0.4.19", features = ["wasmbind"] }
+util = {path = "../../util"}

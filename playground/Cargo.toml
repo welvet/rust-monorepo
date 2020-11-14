@@ -1,0 +1,17 @@
+[package]
+name = "playground"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+chrono = "0.4"
+util = {path = "../util"}
+
+[[bin]]
+name = "test1"
+path = "src/test1.rs"
+
+[[bin]]
+name = "test2"
+path = "src/test2.rs"
+

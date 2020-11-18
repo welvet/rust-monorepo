@@ -1,14 +1,12 @@
-use warp::Filter;
 use std::env;
+use warp::Filter;
 
 #[tokio::main]
 async fn main() {
     let args: Vec<String> = env::args().collect();
     let location = args[1].clone();
 
-
-    let hello = warp::path!("hello")
-        .map(|| format!("Hello, {}!", ""));
+    let hello = warp::path!("hello").map(|| format!("Hello, {}!", ""));
 
     let files = warp::fs::dir(location);
 

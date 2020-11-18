@@ -9,7 +9,6 @@ fn fibonacci(n: u32) -> u32 {
     }
 }
 
-
 fn main() {
     for _ in 1..10 {
         let start = Local::now();

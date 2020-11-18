@@ -1,5 +1,5 @@
-use chrono::Duration;
 use chrono::prelude::*;
+use chrono::Duration;
 use yew::prelude::*;
 
 use util::simple_add;
@@ -19,7 +19,7 @@ pub struct App {
 }
 
 pub enum Msg {
-    ButtonClick
+    ButtonClick,
 }
 
 impl Component for App {
@@ -27,7 +27,11 @@ impl Component for App {
     type Properties = ();
 
     fn create(_: Self::Properties, link: ComponentLink<Self>) -> Self {
-        App { diff: Duration::zero(), fib: 0, link }
+        App {
+            diff: Duration::zero(),
+            fib: 0,
+            link,
+        }
     }
 
     fn update(&mut self, _msg: Self::Message) -> ShouldRender {

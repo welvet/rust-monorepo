@@ -10,10 +10,7 @@ async fn main() {
 
     let files = warp::fs::dir(location);
 
-    warp::serve(hello.or(files))
-        .tls()
-        .cert_path("keys/cert.pem")
-        .key_path("keys/key.pem")
-        .run(([0, 0, 0, 0], 8080))
-        .await;
+    println!("Running server on 8080");
+
+    warp::serve(hello.or(files)).run(([0, 0, 0, 0], 8080)).await;
 }

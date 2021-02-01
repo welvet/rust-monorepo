@@ -1,7 +1,8 @@
 [workspace]
 
-members = [
+members = [	
     "util",
+    "leetcode",
     "playground",
     "webplay/backend",
     "webplay/frontend",

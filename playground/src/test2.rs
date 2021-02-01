@@ -6,7 +6,7 @@ fn main() {
     let mut handle: Option<JoinHandle<()>> = None;
     for i in 1..10000 {
         handle = Some(thread::spawn(|| {
-            for i in 1..100 {
+            for _ in 1..100 {
                 // println!("hi number {} from the spawned thread!", i);
                 thread::sleep(Duration::from_secs(1));
             }

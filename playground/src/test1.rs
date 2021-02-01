@@ -16,3 +16,13 @@ fn main() {
         println!("{}", Local::now() - start);
     }
 }
+
+#[test]
+fn fibonacci_test() {
+    fibonacci(1);
+}
+
+#[test]
+fn fibonacci_test2() {
+    assert_eq!(1, 2);
+}

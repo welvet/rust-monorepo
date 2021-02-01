@@ -1,0 +1,11 @@
+[package]
+name = "leetcode"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+util = {path = "../util"}
+
+[[bin]]
+name = "lc-001"
+path = "src/001.rs"

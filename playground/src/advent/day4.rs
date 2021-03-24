@@ -2,10 +2,12 @@ use std::collections::HashMap;
 
 mod utils;
 
-
 fn main() {
     let input = utils::read_input("playground/data/advent/day4.txt").unwrap();
-    let fields: Vec<String> = vec!("byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid").iter().map(|&x| x.to_string()).collect();
+    let fields: Vec<String> = vec!["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"]
+        .iter()
+        .map(|&x| x.to_string())
+        .collect();
 
     let count = split_to_passports(input)
         .iter()
@@ -53,11 +55,9 @@ fn split_to_attributes(line: String) -> HashMap<String, String> {
 fn is_passport_valid(fields: Vec<String>, input: HashMap<String, String>) -> bool {
     for f in fields {
         if input.get(f.as_str()).is_none() {
-            return false
+            return false;
         }
     }
-
-    Regex::new("");
 
     true
 }

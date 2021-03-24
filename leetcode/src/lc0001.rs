@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 use std::convert::TryInto;
 
-pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
+fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
     let mut result: Vec<i32> = Vec::new();
     let mut map: HashMap<i32, i32> = HashMap::new();
     for (pos, x) in nums.iter().enumerate() {
@@ -15,16 +15,15 @@ pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
     return result;
 }
 
-pub fn main() {
-	let mut input: Vec<i32> = Vec::new();
-	input.push(1);
-	input.push(2);
-	input.push(3);
 
-	let result = two_sum(input, 4);
+#[test]
+fn test_input() {
+    let mut input: Vec<i32> = Vec::new();
+    input.push(1);
+    input.push(2);
+    input.push(3);
 
-	for x in result {
-		println!("{}", x);
-	}
+    let result = two_sum(input, 4);
+
+    assert_eq!(2, result.len());
 }
-

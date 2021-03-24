@@ -30,3 +30,7 @@ path = "src/advent/day3.rs"
 [[bin]]
 name = "day4"
 path = "src/advent/day4.rs"
+
+[[bin]]
+name = "book_tests"
+path = "src/book/book_test.rs"

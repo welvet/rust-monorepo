@@ -24,5 +24,5 @@ fn fibonacci_test() {
 
 #[test]
 fn fibonacci_test2() {
-    assert_eq!(1, 2);
+    assert_eq!(fibonacci(0), fibonacci(1));
 }

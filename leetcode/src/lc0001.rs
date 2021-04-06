@@ -15,7 +15,6 @@ fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
     return result;
 }
 
-
 #[test]
 fn test_input() {
     let mut input: Vec<i32> = Vec::new();
